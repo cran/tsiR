@@ -131,7 +131,7 @@ estpars <- function(data, xreg = 'cumcases',IP = 2,seasonality='standard',
 
       if(sigvec[it] <= min(sigvec)){
         ## use the loess then
-        print('guassian regressian failed -- switching to loess regression')
+        print('gaussian regressian failed -- switching to loess regression')
         Yhat <- predict(loess(y~x,se=T,family='gaussian',degree=1,model=T),X)
       }
 

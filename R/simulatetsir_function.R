@@ -94,7 +94,7 @@ simulatetsir <- function(data, nsim = 100, IP=2,
           I[t] <- I[t]
         }
         if(epidemics == 'break'){
-          t0s <- epitimes(data,threshold)
+          t0s <- epitimes(data,threshold)$start
           if(t %in% t0s){
             I[t] <- adj.rho[t]*data$cases[t]
           }
@@ -176,7 +176,7 @@ simulatetsir <- function(data, nsim = 100, IP=2,
       }
       if(epidemics == 'break'){
         
-        t0s <- epitimes(data,threshold)
+        t0s <- epitimes(data,threshold)$start
         if(t %in% t0s){
           I[t] <- adj.rho[t]*data$cases[t]
         }

@@ -175,7 +175,7 @@ mcmctsir <- function(data, xreg = 'cumcases',
 
       if(sigvec[it] <= min(sigvec)){
         ## use the loess then
-        print('guassian regressian failed -- switching to loess regression')
+        print('gaussian regressian failed -- switching to loess regression')
         Yhat <- predict(loess(y~x,se=T,family='gaussian',degree=1,model=T),X)
       }
 
@@ -568,7 +568,7 @@ mcmctsir <- function(data, xreg = 'cumcases',
           I[t] <- I[t]
         }
         if(epidemics == 'break'){
-          t0s <- epitimes(data,threshold)
+          t0s <- epitimes(data,threshold)$start
           if(t %in% t0s){
             I[t] <- adj.rho[t]*data$cases[t]
           }
@@ -648,7 +648,7 @@ mcmctsir <- function(data, xreg = 'cumcases',
       }
       if(epidemics == 'break'){
         
-        t0s <- epitimes(data,threshold)
+        t0s <- epitimes(data,threshold)$start
         if(t %in% t0s){
           I[t] <- adj.rho[t]*data$cases[t]
         }
