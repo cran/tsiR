@@ -1,4 +1,4 @@
-63946eb0059d6b60fe8e415976eb9dde *DESCRIPTION
+7776c4b9075e8040ebb943834cb8f158 *DESCRIPTION
 c00a71d393ff8065edab3359af68cc3c *NAMESPACE
 36af629c881bd6d509365f38b5048112 *R/corr_function.R
 6cc26d605cc7375dfad18184703cb48d *R/derivative_function.R
@@ -19,6 +19,7 @@ a91bf579a8d9b10f0ef89a9732202696 *R/plotres_function.R
 68320ebd199d54eb1607c7ff5bf9b5eb *R/residual.cases_function.R
 fcb1fdbbbf6d340603e74f06bd75b5e9 *R/runtsir_function.R
 59e28094670dd611a2bdf674ca27f800 *R/simulatetsir_function.R
+71cbf4d98f9db37f40eddab24283891a *R/subplots_functions.R
 1ca256b721ce33ed407fea62f0216626 *R/tsiRdata_function.R
 a9fe7e4e80d442ac018f4b9a9ceb6c83 *R/vplayout_function.R
 b28886afb6d7338e6746933e769100ea *README.md
@@ -32,11 +33,16 @@ d6d78927ecee88aa827d8fcd3a443753 *man/estpars.Rd
 7816021720ead7b9891a3d6424742613 *man/maxthreshold.Rd
 98d04874096b910144700ee0a7481905 *man/mcmcestpars.Rd
 d4834f5c66d9c7e6d859d43022994ef6 *man/mcmctsir.Rd
+fe05aae4e1b991349a4a46f61ed6e3aa *man/plotbeta.Rd
 72640fabda7782c6b301923d04f5bf58 *man/plotbreaks.Rd
 b2121228c7ec454c261af935cf7a4ee7 *man/plotcases.Rd
 44e81cddbccb8b514424386296b9bee1 *man/plotcomp.Rd
 b4dd3ce04b72a1d496258e02bff9252a *man/plotdata.Rd
+7192745769695e042575e30413fae53f *man/plotforward.Rd
+7a5211692f0bbd4e078cc595759aa6fb *man/plotregression.Rd
 160500b496ca40d37ecaed8c7ebca170 *man/plotres.Rd
+79332cd2269ca7ab794100f52c9ba1ac *man/plotrho.Rd
+d416c609a87c4d21cf5e06755435e8d0 *man/plotsbar.Rd
 403f1aa6ed96dc794a963eddb41312b8 *man/residual.births.Rd
 16c1ad49d7408463df297245967c455b *man/residual.cases.Rd
 d044c53d53019ba2bfd4426c7ca52c61 *man/runtsir.Rd
