@@ -272,7 +272,7 @@ mcmctsir <- function(data, xreg = 'cumcases',
 
   pop <- data$pop
 
-  minSmean <- max(0.01*pop,-(min(Z)+1))
+  minSmean <- max(0.01*pop,-(min(Z) - 1))
   Smean <- seq(minSmean, 0.4*mean(pop), length=250)
 
   alphalow <- NA
@@ -598,6 +598,10 @@ mcmctsir <- function(data, xreg = 'cumcases',
 
   IC <- c(S_start,I_start)
 
+  if(any(IC < 0 )){
+    warning('One (or both) initial condition is zero, try fixing or increasing sbar')
+  }
+
   print(c('alpha'=unname(signif(alpha,2)),
           'mean beta'=unname(signif(mean(beta),3)),
           'mean rho' =unname(signif(mean(1/adj.rho),3)),
@@ -620,13 +624,12 @@ mcmctsir <- function(data, xreg = 'cumcases',
     for (t in 2:(nrow(data))){
 
       if(pred == 'step-ahead'){
-        I[t] <- adj.rho[t]*data$cases[t]
-        }
+        lambda <- min(S[t-1],unname(beta[period[t-1]] * S[t-1] * (adj.rho[t-1]*data$cases[t-1])^alpha))
+      }
       if(pred == 'forward'){
         I <- I
+        lambda <- min(S[t-1],unname(beta[period[t-1]] * S[t-1] * (I[t-1])^alpha))
       }
-
-      lambda <- min(S[t-1],unname(beta[period[t-1]] * S[t-1] * (I[t-1])^alpha))
 
       #if(lambda < 1 || is.nan(lambda) == T){lambda <- 0}
       if(is.nan(lambda) == T){lambda <- 0}
