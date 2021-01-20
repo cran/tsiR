@@ -4,13 +4,31 @@
 \alias{mcmctsir}
 \title{mcmctsir}
 \usage{
-mcmctsir(data, xreg = "cumcases", IP = 2, nsim = 100,
-  regtype = "gaussian", sigmamax = 3, userYhat = numeric(),
-  update.iter = 10000, n.iter = 30000, n.chains = 3,
-  n.adapt = 1000, burn.in = 100, method = "deterministic",
-  epidemics = "cont", pred = "forward", seasonality = "standard",
-  inits.fit = FALSE, threshold = 1, sbar = NULL, alpha = NULL,
-  add.noise.sd = 0, mul.noise.sd = 0, printon = F)
+mcmctsir(
+  data,
+  xreg = "cumcases",
+  IP = 2,
+  nsim = 100,
+  regtype = "gaussian",
+  sigmamax = 3,
+  userYhat = numeric(),
+  update.iter = 10000,
+  n.iter = 30000,
+  n.chains = 3,
+  n.adapt = 1000,
+  burn.in = 100,
+  method = "deterministic",
+  epidemics = "cont",
+  pred = "forward",
+  seasonality = "standard",
+  inits.fit = FALSE,
+  threshold = 1,
+  sbar = NULL,
+  alpha = NULL,
+  add.noise.sd = 0,
+  mul.noise.sd = 0,
+  printon = F
+)
 }
 \arguments{
 \item{data}{The data frame containing cases and interpolated births and populations.}

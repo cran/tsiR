@@ -4,10 +4,19 @@
 \alias{simulatetsir}
 \title{simulatetsir}
 \usage{
-simulatetsir(data, nsim = 100, IP = 2, parms,
-  method = "deterministic", epidemics = "cont", pred = "forward",
-  threshold = 1, inits.fit = FALSE, add.noise.sd = 0,
-  mul.noise.sd = 0)
+simulatetsir(
+  data,
+  nsim = 100,
+  IP = 2,
+  parms,
+  method = "deterministic",
+  epidemics = "cont",
+  pred = "forward",
+  threshold = 1,
+  inits.fit = FALSE,
+  add.noise.sd = 0,
+  mul.noise.sd = 0
+)
 }
 \arguments{
 \item{data}{The data frame containing cases and interpolated births and populations.}

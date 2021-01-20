@@ -4,9 +4,17 @@
 \alias{maxthreshold}
 \title{maxthreshold}
 \usage{
-maxthreshold(data, nsim = 2, IP = 2, method = "deterministic",
-  inits.fit = FALSE, parms, thresholdmin = 2, thresholdmax = 20,
-  printon = FALSE)
+maxthreshold(
+  data,
+  nsim = 2,
+  IP = 2,
+  method = "deterministic",
+  inits.fit = FALSE,
+  parms,
+  thresholdmin = 2,
+  thresholdmax = 20,
+  printon = FALSE
+)
 }
 \arguments{
 \item{data}{The time, cases, births, pop data frame.}

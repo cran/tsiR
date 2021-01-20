@@ -4,11 +4,23 @@
 \alias{mcmcestpars}
 \title{mcmcestpars}
 \usage{
-mcmcestpars(data, xreg = "cumcases", IP = 2, regtype = "gaussian",
-  sigmamax = 3, seasonality = "standard", userYhat = numeric(),
-  update.iter = 10000, n.iter = 30000, n.chains = 3,
-  n.adapt = 1000, burn.in = 100, sbar = NULL, alpha = NULL,
-  printon = F)
+mcmcestpars(
+  data,
+  xreg = "cumcases",
+  IP = 2,
+  regtype = "gaussian",
+  sigmamax = 3,
+  seasonality = "standard",
+  userYhat = numeric(),
+  update.iter = 10000,
+  n.iter = 30000,
+  n.chains = 3,
+  n.adapt = 1000,
+  burn.in = 100,
+  sbar = NULL,
+  alpha = NULL,
+  printon = F
+)
 }
 \arguments{
 \item{data}{The data frame containing cases and interpolated births and populations.}

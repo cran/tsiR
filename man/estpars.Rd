@@ -4,10 +4,20 @@
 \alias{estpars}
 \title{estpars}
 \usage{
-estpars(data, xreg = "cumcases", IP = 2, seasonality = "standard",
-  regtype = "gaussian", sigmamax = 3, family = "gaussian",
-  link = "identity", userYhat = numeric(), alpha = NULL,
-  sbar = NULL, printon = F)
+estpars(
+  data,
+  xreg = "cumcases",
+  IP = 2,
+  seasonality = "standard",
+  regtype = "gaussian",
+  sigmamax = 3,
+  family = "gaussian",
+  link = "identity",
+  userYhat = numeric(),
+  alpha = NULL,
+  sbar = NULL,
+  printon = F
+)
 }
 \arguments{
 \item{data}{The data frame containing cases and interpolated births and populations.}
